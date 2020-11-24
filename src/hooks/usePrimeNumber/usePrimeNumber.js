@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const usePrimeNumber = () => {
     return [true, () => {}, 0]
 }
