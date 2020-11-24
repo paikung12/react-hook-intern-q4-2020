@@ -1,17 +1,19 @@
-import { act, renderHook } from '@testing-library/react-hooks';
+import { act, renderHook } from '@testing-library/react-hooks'
 import usePrimeNumber from './usePrimeNumber'
 
-describe("usePrimeNumber", () => {
+describe('usePrimeNumber', () => {
+    it('fully return;', () => {
+        const { result } = renderHook(usePrimeNumber)
 
-    it("fully return;", () => {
-
-        const {result}  = renderHook(usePrimeNumber)
-
-        expect(result.current).toEqual([expect.any(Boolean), expect.any(Function), expect.any(Number)])        
+        expect(result.current).toEqual([
+            expect.any(Boolean),
+            expect.any(Function),
+            expect.any(Number),
+        ])
     })
 
-    it("should check is Prime number correctly", () => {
-        const {result}  = renderHook(usePrimeNumber)
+    it('should check is Prime number correctly', () => {
+        const { result } = renderHook(usePrimeNumber)
 
         act(() => {
             result.current[1](13)
@@ -48,8 +50,5 @@ describe("usePrimeNumber", () => {
         })
         expect(result.current[0]).toEqual(true)
         expect(result.current[2]).toEqual(29)
-
-
     })
-
 })

@@ -1,11 +1,7 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const usePrimeNumber = () => {
-    return [
-        true,
-        () => {},
-        0
-    ]
+    return [true, () => {}, 0]
 }
 
-export default usePrimeNumber;
+export default usePrimeNumber
