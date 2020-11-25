@@ -5,9 +5,7 @@ describe('Login Form', () => {
     it('render correctly', () => {
         const mockSubmit = jest.fn()
 
-        const { getByText, getByRole } = render(
-            <LoginForm mockSubmit={mockSubmit} />
-        )
+        const { getByText } = render(<LoginForm mockSubmit={mockSubmit} />)
         expect(getByText('Login Form')).toBeTruthy()
         expect(mockSubmit).toHaveBeenCalledTimes(0)
     })
