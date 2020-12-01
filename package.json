@@ -60,6 +60,13 @@
                 "lines": 100,
                 "statements": 100
             }
-        }
+        },
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx}",
+            "!**/node_modules/**",
+            "!**/vendor/**",
+            "!src/App.js",
+            "!src/index.js"
+        ]
     }
 }
