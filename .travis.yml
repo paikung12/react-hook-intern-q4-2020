@@ -8,4 +8,4 @@ install:
     - yarn install
 script:
     - npx eslint src
-    - yarn test
+    - yarn test --coverage
