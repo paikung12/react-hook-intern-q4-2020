@@ -22,7 +22,7 @@ const MyValidateForm = ({ handleSubmit }) => {
     return (
         <form onSubmit={onsubmit}>
             <p>Login Form</p>
-            {isError ** <p>Error! email is invalid</p>}
+            {isError && <p>Error! email is invalid</p>}
             <div>
                 <label htmlFor="input-email">EMAIL</label>
                 <input
