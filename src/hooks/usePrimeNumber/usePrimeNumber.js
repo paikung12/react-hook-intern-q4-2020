@@ -11,8 +11,6 @@ const usePrimeNumber = () => {
     useEffect(() => {
         if (num <= 1) {
             return setIsPrime(false)
-        } else if (num === 2) {
-            return setIsPrime(true)
         } else {
             for (var x = 2; x < num; x++) {
                 if (num % x === 0) {
