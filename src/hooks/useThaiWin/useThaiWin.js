@@ -6,7 +6,7 @@ const useThaiWin = () => {
     const [isStay, setIsStay] = useState(false)
 
     const enter = useCallback(() => {
-        if (!isStay) enterAPI()
+        if (!isStay) enterThaiWin()
         setIsStay(true)
     }, [isStay, setIsStay])
 
