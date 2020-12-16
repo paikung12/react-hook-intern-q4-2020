@@ -12,7 +12,7 @@ const useThaiWin = () => {
 
     const exist = useCallback(() => {
         setIsStay(false)
-        enterAPI()
+        exitThaiWin()
     }, [setIsStay])
 
     useEffect(() => {
