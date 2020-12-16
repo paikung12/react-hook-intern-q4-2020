@@ -1,4 +1,30 @@
+import React, { useState, useEffect, useCallback } from 'react'
+
 const usePrimeNumber = () => {
-    return [true, () => {}, 0]
+    const [isPrime, setIsPrime] = useState(false)
+
+    const calPrime = (number) => {
+        setNum(number)
+    }
+    const [num, setNum] = useState(0)
+
+    useEffect(() => {
+        if (num <= 1) {
+            return setIsPrime(false)
+        } else if (num === 2) {
+            return setIsPrime(true)
+        } else {
+            for (var x = 2; x < num; x++) {
+                if (num % x === 0) {
+                    return setIsPrime(false)
+                }
+            }
+
+            return setIsPrime(true)
+        }
+    }, [num])
+
+    return [isPrime, calPrime, num]
 }
+
 export default usePrimeNumber

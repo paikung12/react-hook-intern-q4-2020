@@ -5,22 +5,21 @@ import exitThaiWin from '../../api/exitThaiWin'
 const useThaiWin = () => {
     const [isStay, setIsStay] = useState(false)
 
-    const enter = useCallback(() => {
-        if (!isStay) enterAPI()
-        setIsStay(true)
-    }, [isStay, setIsStay])
-
-    const exist = useCallback(() => {
-        setIsStay(false)
-        enterAPI()
-    }, [setIsStay])
-
-    useEffect(() => {
-        isStay
-        return () => {
-            exitAPI
+    const enter = () => {
+        if (!isStay) {
+            enterThaiWin()
+            setIsStay(true)
         }
-    }, [isStay])
+    }
+    const exit = () => {
+        exitThaiWin()
+        setIsStay(false)
+    }
+    useEffect(() => {
+        return () => {
+            exitThaiWin()
+        }
+    }, [])
 
     return [isStay, enter, exist]
 }
