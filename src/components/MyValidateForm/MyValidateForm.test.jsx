@@ -12,7 +12,7 @@ describe('MyValidateForm', () => {
 
         act(() => {
             fireEvent.change(getByLabelText('EMAIL'), {
-                target: { value: 'nook@gmail.com' },
+                target: { value: 'pai@gmail.com' },
             })
         })
 
