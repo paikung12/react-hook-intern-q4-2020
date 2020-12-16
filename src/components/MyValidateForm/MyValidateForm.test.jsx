@@ -1,13 +1,8 @@
 import React from 'react'
-import { configure, shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 import { act, fireEvent, render } from '@testing-library/react'
 import MyValidateForm from './MyValidateForm'
 
 describe('MyValidateForm', () => {
-    configure({ adapter: new Adapter() })
-    const wrapper = shallow(<MyValidateForm />)
-
     it('when submit email the right format, should submit with that email', () => {
         const mockSubmit = jest.fn()
 
